@@ -19,6 +19,7 @@ while opcion != 4:
             nombre_pelicula = input(" Indique el nombre de la pelicula:")
             pelicula = Pelicula(nombre_pelicula)
             catalogo.agregar_pelicula(pelicula)
+            año_pelicula = int(input(" Indique el año de la pelicula:"))
         elif opcion == 2:
             #esta opc no va a funcionar hasta que se desarrolle el metodo listar peliculas de la clase CatalogoPelicula
             catalogo.listar_peliculas()
