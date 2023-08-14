@@ -1,4 +1,4 @@
-from clases import *  # podia poner Pelicula, CatalogoPelicula, pero el * importa todo
+from clases import *  
 
 opcion = None
 
@@ -7,22 +7,21 @@ catalogo = CatalogoPelicula(nombre_catalogo)
 
 while opcion != 4:
     try:
-        print("Opciones: ")
+        print("Opciones:    \n")
         print("1. Agregar Pelicula")
         print("2. Listar Pelicula")
         print("3. Eliminar catálogo películas")
         print("4. Salir")
-
+        print("             \n         ")
         opcion = int(input("Escribe tu opción ( del 1 al 4):"))
-
+        print("             \n         ")
         if opcion == 1:
-            nombre_pelicula = input(" Indique el nombre de la pelicula:")
+            nombre_pelicula = input(" Indique el nombre de la pelicula: ")
             pelicula = Pelicula(nombre_pelicula)
             catalogo.agregar_pelicula(pelicula)
-            año_pelicula = int(input(" Indique el año de la pelicula:"))
+           
         elif opcion == 2:
-            #esta opc no va a funcionar hasta que se desarrolle el metodo listar peliculas de la clase CatalogoPelicula
-            catalogo.listar_peliculas()
+             catalogo.listar_peliculas()
         elif opcion == 3:
             catalogo.eliminar_peliculas()
     except Exception as e:
